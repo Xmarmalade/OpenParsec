@@ -26,7 +26,7 @@ jobs:
         with:
           xcode-version: '15.3'
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Set Scheme
@@ -90,7 +90,7 @@ jobs:
 
     steps:
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.archive_path }}.xcarchive.tar
       - name: Extract Build Artifact
@@ -132,7 +132,7 @@ jobs:
 
     steps:
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ needs.package.outputs.artifact }}
       - name: Nightly Release
